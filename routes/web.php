@@ -43,4 +43,7 @@ Route::middleware(['auth','role:agent'])->group(function() {
     Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
 }); // end group agent middleware
 
+
+Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
+
 // mp stop
